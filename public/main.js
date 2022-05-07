@@ -1,10 +1,12 @@
+
 // Foursquare API Info
-const clientId = '';
-const clientSecret = '';
-const url = 'https://api.foursquare.com/v2/venues/explore?near=';
+const clientId ='' /* insert var here*/ ;
+const clientSecret = '' /* insert var here*/ ;
+const fsqKey = '' /* insert var here*/ ;
+const url = 'https://api.foursquare.com/v3/places/search?near=';
 
 // OpenWeather Info
-const openWeatherKey = '';
+const openWeatherKey = '' /* insert var here*/ ;
 const weatherUrl = 'https://api.openweathermap.org/data/2.5/weather';
 
 // Page Elements
@@ -19,13 +21,21 @@ const weekDays = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Frida
 // Add AJAX functions here:
 const getVenues = async () => {
   const city = $input.val();
-  const urlToFetch = `${url}${city}&limit=10&client_id=${clientId}&client_secret=${clientSecret}&v=20210505`;
+  const urlToFetch = `${url}${city}`;
+  console.log(urlToFetch);
   try {
-    const response = await fetch(urlToFetch);
+    const response = await fetch(urlToFetch, {
+      method: 'GET',
+      headers: { 
+        "Accept": "application/json", 
+        "Authorization": fsqKey
+      }
+    });
     if (response.ok) {
       const jsonResponse = await response.json();
-      const venues = jsonResponse.response.groups[0].items.map(item => item.venue);
-      console.log(venues);
+      // jsonResponse changed due to the restructuring of the retured json object from the foursquare API
+      const venues = jsonResponse.results;
+       console.log(venues);
       return venues;
     } 
   } catch(error) {
