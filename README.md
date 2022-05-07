@@ -4,6 +4,9 @@
 ## Description:
 Using a combination of OpenWeather and FourSquare API's , users can fetch information about a particular location's current weather and list relevent venues around in that area to visit!
 An application like this is phenomenal for travelers who are on the GO!  
+<img width="1256" alt="image" src="https://user-images.githubusercontent.com/86696492/167236776-2650b8ee-6a64-406f-a3f2-add3bab5b30b.png">
+<img width="1258" alt="image" src="https://user-images.githubusercontent.com/86696492/167236785-a2bcbb2c-2339-4679-8205-dcba590b7d02.png">
+
 
 ## Details
 This applications uses asynchronous HTTP GET fetch requests to recieve relavent information about the locations they are searching for.
