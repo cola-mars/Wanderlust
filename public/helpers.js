@@ -3,7 +3,7 @@ const createVenueHTML = (name, location, iconSource) => {
     <img class="venueimage" src="${iconSource}"/>
     <h3>Address:</h3>
     <p>${location.address}</p>
-    <p>${location.city}</p>
+    <p>${location.locality}</p>
     <p>${location.country}</p>`;
   }
   

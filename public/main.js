@@ -1,12 +1,12 @@
 
 // Foursquare API Info
-const clientId ='' /* insert var here*/ ;
-const clientSecret = '' /* insert var here*/ ;
-const fsqKey = '' /* insert var here*/ ;
+const clientId ='VLLGRGWCPQMSXFWTIZVL2T34XRA1PWS1EUVBFIIYT32NE1E1' /* insert var here*/ ;
+const clientSecret = 'KTS30IA4VBW5TBIBDQIO1JVM40NINBSZKZB1JRFIH0WAI5DY' /* insert var here*/ ;
+const fsqKey = 'fsq30qyCm551SXN+2FGAcNHxlu90zhAei8461SvZkAFJhmw=' /* insert var here*/ ;
 const url = 'https://api.foursquare.com/v3/places/search?near=';
 
 // OpenWeather Info
-const openWeatherKey = '' /* insert var here*/ ;
+const openWeatherKey = 'de4084fe21aab085a9b43a06f4ecd035' /* insert var here*/ ;
 const weatherUrl = 'https://api.openweathermap.org/data/2.5/weather';
 
 // Page Elements
@@ -66,7 +66,7 @@ const renderVenues = (venues) => {
     let venueContent = createVenueHTML(venue.name, venue.location, venueImgSrc);
     $venue.append(venueContent);
   });
-  $destination.append(`<h2>${venues[0].location.city}</h2>`);
+  $destination.append(`<h2>${venues[0].location.locality}</h2>`);
 }
 
 const renderForecast = (day) => {

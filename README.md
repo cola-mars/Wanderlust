@@ -16,5 +16,5 @@ In order to use the app, a client ID, secret, and API key need to be provided fo
 - May 6, 2022: Foursquare recently changed the API request for handling places. API calls within this application have been updated to provide the most up to date functionality to the user experience.
 
 ## Questions
-[Github♥️](https://nicolalenee.github.io/Wanderlust/)
+[Github♥️](https://nicolalenee.github.io/Wanderlust/)  
 [Email📧](marblenicola@gmail.com)
